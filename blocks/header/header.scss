@@ -8,6 +8,14 @@ $green: rgba(0, 148, 101, 1);
 $font-family: 'Noto Sans';
 $hover: rgba(6, 108, 76, 1);
 
+@mixin desctop-button-reg {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: (18px)/15px;
+  width: 218px;
+  height: 48px;
+}
+
 @mixin desctop-board {
   width: 416px;
   height: 104px;
@@ -96,6 +104,7 @@ $hover: rgba(6, 108, 76, 1);
 .register-batton {
   font-family: $font-family;
   background-color: $green;
+  border: none;
   border-radius: 8px;
   color: $font-color;
   font-weight: 600;

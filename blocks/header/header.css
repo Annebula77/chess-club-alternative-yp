@@ -43,6 +43,7 @@
 .register-batton {
   font-family: "Noto Sans";
   background-color: rgb(0, 148, 101);
+  border: none;
   border-radius: 8px;
   color: rgb(255, 255, 255);
   font-weight: 600;
