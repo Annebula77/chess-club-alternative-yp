@@ -40,7 +40,7 @@
   margin: 0 62px 0 auto;
 }
 
-.header__register-batton {
+.register-batton {
   font-family: "Noto Sans";
   background-color: rgb(0, 148, 101);
   border-radius: 8px;
@@ -50,6 +50,13 @@
   line-height: 1.2;
   width: 218px;
   height: 48px;
+  cursor: pointer;
+}
+
+.register-batton:hover {
+  background-color: rgb(6, 108, 76);
+  transition: ease-out;
+  transition-duration: 0.5s;
 }
 
 .header__main-container {
@@ -117,7 +124,7 @@
     font-size: 13px;
     line-height: 1.2307692308;
   }
-  .header__register-batton {
+  .register-batton {
     font-size: 13px;
     line-height: 1.3846153846;
     width: 184px;
@@ -149,7 +156,7 @@
   .header__action {
     display: none;
   }
-  .header__register-batton {
+  .register-batton {
     font-size: 10px;
     line-height: 1.8;
     width: 140px;

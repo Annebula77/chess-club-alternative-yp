@@ -6,6 +6,7 @@ $color-2: rgba(80, 54, 230, 1);
 $font-color: rgba(255, 255, 255, 1);
 $green: rgba(0, 148, 101, 1);
 $font-family: 'Noto Sans';
+$hover: rgba(6, 108, 76, 1);
 
 @mixin desctop-board {
   width: 416px;
@@ -92,7 +93,7 @@ $font-family: 'Noto Sans';
   margin: 0 62px 0 auto;
 }
 
-.header__register-batton {
+.register-batton {
   font-family: $font-family;
   background-color: $green;
   border-radius: 8px;
@@ -102,6 +103,13 @@ $font-family: 'Noto Sans';
   line-height: (18px)/15px;
   width: 218px;
   height: 48px;
+  cursor: pointer;
+}
+
+.register-batton:hover {
+  background-color: $hover;
+  transition: ease-out;
+  transition-duration: 0.5s;
 }
 
 .header__main-container {
@@ -165,7 +173,7 @@ $font-family: 'Noto Sans';
       line-height: (16px)/13px;
     }
   }
-  .header__register-batton {
+  .register-batton {
     font-size: 13px;
     line-height: (18px)/13px;
     width: 184px;
@@ -203,7 +211,7 @@ $font-family: 'Noto Sans';
     display: none;
   }
 
-  .header__register-batton {
+  .register-batton {
     font-size: 10px;
     line-height: (18px)/10px;
     width: 140px;
