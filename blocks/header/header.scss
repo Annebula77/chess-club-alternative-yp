@@ -58,7 +58,7 @@ $font-family: 'Noto Sans';
   width: 100%;
   background-image: url(../../images/blue-rings-header.svg);
   background-repeat: no-repeat;
-  background-position: right 160px;
+  background-position: right 150px;
   padding: 26px 0 80px 160px;
   margin: 0;
   overflow: hidden;
@@ -89,12 +89,13 @@ $font-family: 'Noto Sans';
   line-height: (16.5px)/15px;
   color: $font-color;
   padding: 0;
-  margin: 0 52px 0 auto;
+  margin: 0 62px 0 auto;
 }
 
 .header__register-batton {
   font-family: $font-family;
   background-color: $green;
+  border-radius: 8px;
   color: $font-color;
   font-weight: 600;
   font-size: 15px;
@@ -114,7 +115,7 @@ $font-family: 'Noto Sans';
 .header__label {
   width: 84px;
   height: 50px;
-  margin: 78px 0 88px 0;
+  margin: 58px 0 70px 0;
 }
 
 .header__title {
@@ -122,7 +123,7 @@ $font-family: 'Noto Sans';
   color: $font-color;
   @include large-text-desktop;
   max-width: 500px;
-  padding: 0 0 40px 0;
+  padding: 0 0 42px 0;
   margin: 0;
 }
 
@@ -130,8 +131,8 @@ $font-family: 'Noto Sans';
   box-sizing: border-box;
   color: $font-color;
   @include medium-text-desktop;
-  max-width: 500px;
-  padding: 0 0 162px 0;
+  max-width: 470px;
+  padding: 0 0 182px 0;
   margin: 0;
 }
 
@@ -154,10 +155,22 @@ $font-family: 'Noto Sans';
 
 @media screen and (max-width: 1080px) {
   .header {
-    background-position: 640px 160px;
+    background-image: url(../../images/tablet-header-circles-blue.svg);
+    background-position: right 300px;
     padding-left: 50px;
-  }
 
+    .header__action {
+      margin: 0 33px 0 auto;
+      font-size: 13px;
+      line-height: (16px)/13px;
+    }
+  }
+  .header__register-batton {
+    font-size: 13px;
+    line-height: (18px)/13px;
+    width: 184px;
+    height: 44px;
+  }
   .header__upper-container {
     padding: 0 50px 0 0;
   }
@@ -166,7 +179,7 @@ $font-family: 'Noto Sans';
     margin: 60px 0 70px 0;
   }
   .header__subtitle {
-    padding: 0 0 192px 0;
+    padding: 0 0 212px 0;
   }
 }
 
@@ -202,16 +215,19 @@ $font-family: 'Noto Sans';
     align-items: flex-start;
   }
   .header__label {
+    width: 63px;
+    height: 40px;
     margin: 50px 0 60px 0;
   }
 
   .header__title {
     @include large-text-mobile;
+    padding: 0 0 20px 0;
     width: 90%;
   }
 
   .header__subtitle {
-    padding: 0 0 100px 0;
+    padding: 0 0 92px 0;
     @include medium-text-mobile;
     width: 90%;
   }

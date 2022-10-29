@@ -1,7 +1,6 @@
-* {
+/* {
   box-shadow: 0 0 2px red;
-}
-
+}*/
 .page {
   box-sizing: border-box;
   display: flex;
