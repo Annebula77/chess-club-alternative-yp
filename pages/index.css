@@ -1,0 +1,4 @@
+@import url(../vendor/normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap');
+@import url(../blocks/general/general.css);
+@import url(../blocks/header/header.css);
