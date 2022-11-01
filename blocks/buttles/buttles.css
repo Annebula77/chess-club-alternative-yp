@@ -1,0 +1,38 @@
+.buttles {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 80px 160px 80px;
+  background-image: url(../../images/green_white-semi-circle.svg);
+  background-repeat: no-repeat;
+  background-position: 100px bottom;
+}
+
+.buttles__gallery {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin: 110px 0 110px;
+}
+
+.buttles__photo {
+  display: block;
+  width: 320px;
+  height: 320px;
+  margin: 0;
+  padding: 0;
+}
+
+.buttles__board {
+  display: block;
+  margin: 0;
+  padding: 0;
+  align-self: flex-end;
+  width: 416px;
+  height: 104px;
+}/*# sourceMappingURL=buttles.css.map */
