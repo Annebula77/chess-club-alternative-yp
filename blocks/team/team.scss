@@ -72,10 +72,11 @@ $hover: rgba(6, 108, 76, 1);
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-width: 0;
   background-color: $color-2;
   margin: 0;
   padding: 80px 160px 60px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .team__semi-circle-black {
@@ -101,31 +102,6 @@ $hover: rgba(6, 108, 76, 1);
   left: 220px;
   padding: 0;
   @include null-spacing;
-}
-
-.text-box {
-  box-sizing: border-box;
-  width: 685px * 100% / $gen-width;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
-  @include null-spacing;
-  z-index: 1;
-}
-
-.text-box__title {
-  display: block;
-  @include large-text-desktop;
-  color: $font-color;
-  margin: 0;
-}
-
-.text-box__subtitle {
-  display: block;
-  @include medium-text-desktop;
-  color: $font-color;
-  margin: 0;
 }
 
 .team__photo-box {
@@ -170,28 +146,75 @@ $hover: rgba(6, 108, 76, 1);
   @include null-spacing;
 }
 
-.text-box_spacing {
-  align-self: flex-end;
-  padding-bottom: 112px;
-  padding-left: 10px;
-}
-
 @media screen and (max-width: 1280px) {
+  .team {
+    padding: 90px 80px 90px;
+  }
+
   .team__semi-circle-black {
-    left: -160px;
+    left: -180px;
   }
 
   .team__quarter-green {
     @include circles-desk;
 
-    left: -160px;
+    left: -180px;
   }
 
   .team__circle-green {
-    left: 60px;
+    left: 40px;
   }
 
-  .text-box {
-    width: 70%;
+  .team__photo-box {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .team {
+    background-image: url(../../images/Green-rings-full.svg);
+    background-repeat: no-repeat;
+    background-size: 360px;
+    background-position: left -180px bottom 50px;
+    padding: 50px 50px 60px;
+  }
+  .team__semi-circle-black {
+    display: none;
+  }
+
+  .team__quarter-green {
+    display: none;
+  }
+
+  .team__circle-green {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .team {
+    background-image: url(../../images/mobile-green-semi-circle.svg);
+    background-size: 280px;
+    background-position: bottom;
+    padding: 22px 20px 0;
+  }
+
+  .team__member-photo {
+    width: 280px;
+    height: 280px;
+    padding: 0;
+    margin: 0 0 10px;
+  }
+
+  .team__member-name {
+    font-size: 18px;
+    letter-spacing: (23.4px) / 18px;
+  }
+
+  .team__member-about {
+    @include medium-text-mobile;
+  }
+  .team__member-card {
+    align-items: center;
   }
 }

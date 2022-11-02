@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Шахматный клуб в Москве</title>
   <link rel="stylesheet" href="./pages/index.css">
+  <script src="./vendor/slider/swiper-bundle.min.js" defer></script>
+  <script src="./script.js" defer></script>
 </head>
 
 <body class="page">
@@ -15,7 +17,7 @@
       <p class="header__action">Вступайте в клуб&emsp;<img class="header__arrowup" src="./images/arrow-up.svg"
              alt="arrow-up">
       </p>
-      <button class="register-batton" type="button">Зарегистрироваться</button>
+      <button id="buttonOpen" class="register-batton" type="button">Зарегистрироваться</button>
     </div>
     <div class="header__main-container">
       <img class="header__label" src="./images/club-logo.svg" alt="логотип клуба">
@@ -27,9 +29,10 @@
   </header>
   <main class="content">
     <section class="team" aria-label="team">
-      <article class="text-box">
+      <article class="text-box text-box_sizing">
         <h2 class="text-box__title">Наша команда</h2>
-        <p class="text-box__subtitle">Лучшие шахматисты и шахматистки любители России, гройсмейстеры, с ними играть —
+        <p class="text-box__subtitle text-box__subtitle_width">Лучшие шахматисты и шахматистки любители России,
+          гройсмейстеры, с ними играть —
           одно удовольствие!</p>
       </article>
       <div class="team__photo-box">
@@ -49,18 +52,55 @@
           <p class="team__member-about">Шахматист, геймер.</p>
         </article>
       </div>
+
+      <div class="team__slider swiper">
+        <!-- Additional required wrapper -->
+        <div class="team__slider-wrapper swiper-wrapper">
+          <!-- Slides -->
+          <div class="team__member swiper-slide">
+            <article class="team__member-card">
+              <img class="team__member-photo" src="./images/Andrew.png" alt="Andrew">
+              <h3 class="team__member-name">Андрей</h3>
+              <p class="team__member-about">Шахматист, писатель.</p>
+            </article>
+          </div>
+          <div class="team__member swiper-slide">
+            <article class="team__member-card">
+              <img class="team__member-photo" src="./images/Nikita.png" alt="Nikita">
+              <h3 class="team__member-name">Никита</h3>
+              <p class="team__member-about">Шахматист, кулинар.</p>
+            </article>
+          </div>
+          <div class="team__member swiper-slide">
+            <article class="team__member-card">
+              <img class="team__member-photo" src="./images/Alex.png" alt="Alexey">
+              <h3 class="team__member-name">Алексей</h3>
+              <p class="team__member-about">Шахматист, геймер.</p>
+            </article>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination">
+          <div class="swiper-pagination-bullet"></div>
+        </div>
+      </div>
+
+
       <article class="text-box text-box_spacing">
         <h2 class="text-box__title">Хочешь в комаду?</h2>
-        <p class="text-box__subtitle">Свяжись с нами и мы обсудим все детали присоеденения к команде.</p>
+        <p class="text-box__subtitle text-box__subtitle_width">Свяжись с нами и мы обсудим все детали присоеденения к
+          команде.</p>
       </article>
       <img class="team__semi-circle-black" src="./images/black-semi-circle.svg" alt="черный полукруг">
       <img class="team__quarter-green" src="./images/green-quarter.svg" alt="четверть зеленого круга">
       <img class="team__circle-green" src="./images/Green-rings-full.svg" alt="зеленая окружность">
     </section>
+
     <section class="buttles" aria-label="buttles">
-      <article class="text-box">
+      <article class="text-box text-box_sizing">
         <h2 class="text-box__title">Сражения</h2>
-        <p class="text-box__subtitle">Сражайтесь в парах и приятно проводите время. Если хотите прокачать свои навыки —
+        <p class="text-box__subtitle text-box__subtitle_width">Сражайтесь в парах и приятно проводите время. Если хотите
+          прокачать свои навыки —
           сыграйте с нашими шахматистами.</p>
       </article>
       <div class="buttles__gallery">
@@ -68,19 +108,65 @@
         <img class="buttles__photo" src="./images/buttle_2.png" alt="быстрые шахматы">
         <img class="buttles__photo" src="./images/buttle_3.png" alt="шахматы на пляже">
       </div>
+
+      <div class="buttles__slider swiper">
+        <!-- Additional required wrapper -->
+        <div class="buttles__slider-wrapper swiper-wrapper">
+          <!-- Slides -->
+          <div class="buttles__gallery-slide swiper-slide">
+            <img class="buttles__photo" src="./images/buttle_1.png" alt="шахматы в парке на скамейке">
+          </div>
+          <div class="buttles__gallery-slide swiper-slide">
+            <img class="buttles__photo" src="./images/buttle_2.png" alt="быстрые шахматы">
+          </div>
+          <div class="buttles__gallery-slide swiper-slide">
+            <img class="buttles__photo" src="./images/buttle_3.png" alt="шахматы на пляже">
+          </div>
+          ...
+        </div>
+        <!-- Чтобы появилась пагинация на расширении до 767px нужно перезагрузить страницу -->
+        <div class="swiper-pagination">
+          <div class="swiper-pagination-bullet"></div>
+        </div>
+      </div>
+
+
       <img class="buttles__board" src="./images/chess-board-green.svg" alt="зеленая шахматная доска">
     </section>
   </main>
   <footer class="footer">
     <div class="footer__container">
       <img class="logo logo_footer-size" src="./images/soldier.svg" alt="логотип">
-      <button class="register-batton register-button_footer-size" type="button">Зарегистрироваться</button>
+      <button id="buttonOpen" class="register-batton register-button_footer-size"
+              type="button">Зарегистрироваться</button>
       <h3 class="footer__title">Шахматный клуб в Москве.</h3>
       <p class="footer__copyright">© Chees Club.</p>
     </div>
-
   </footer>
-
+  <div class="popup-form">
+    <div class="popup-form__container">
+      <div class="popup-form__head">
+        <img class="logo" src="./images/soldier.svg" alt="логотип">
+        <h2 class="popup-form__title">Регистрация</h2>
+      </div>
+      <form class="form">
+        <input class="form__input"
+               type="text"
+               name="name"
+               value=""
+               placeholder="Имя" required>
+        <input class="form__input"
+               type="email"
+               name="email"
+               value=""
+               placeholder="Email" required>
+        <div class="form__handeler">
+          <button class="register-batton" type="submit">Зарегистрироваться</button>
+          <button class="register-batton register-batton_leave" type="button">Выйти</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>

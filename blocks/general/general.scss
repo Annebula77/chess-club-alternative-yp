@@ -1,14 +1,73 @@
-* {
+/* {
   box-shadow: 0 0 2px red;
-}
+}*/
 
+$font-color: rgba(255, 255, 255, 1);
+$font-family: 'Noto Sans';
 $gen-width: 1440px;
 $color-1: rgba(0, 0, 0, 1);
+$color-2: rgba(80, 54, 230, 1);
+$font-color: rgba(255, 255, 255, 1);
+$green: rgba(0, 148, 101, 1);
 $font-family: 'Noto Sans';
+$hover: rgba(6, 108, 76, 1);
+
+@mixin desctop-button-reg {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: (18px)/15px;
+  width: 218px;
+  height: 48px;
+}
+
+@mixin desctop-board {
+  width: 416px;
+  height: 104px;
+}
+
+@mixin mobile-board {
+  width: 280px;
+  height: 70px;
+}
+
+@mixin large-text-desktop {
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 0.9;
+}
+
+@mixin large-text-mobile {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: (36px)/40px;
+}
+
+@mixin medium-text-desktop {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+@mixin medium-text-mobile {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: (15.6px)/12px;
+}
+
+@mixin desktop-photo {
+  width: 320px;
+  height: 320px;
+}
 
 @mixin null-spacing {
   margin: 0;
   padding: 0;
+}
+
+@mixin circles-desk {
+  display: block;
+  position: absolute;
+  z-index: 0;
 }
 
 .page {
@@ -37,4 +96,162 @@ $font-family: 'Noto Sans';
   align-items: center;
   width: 100%;
   @include null-spacing;
+
+  &.popup-form_active {
+    display: none;
+  }
+}
+
+.logo {
+  display: block;
+  width: 38px;
+  height: 54px;
+  @include null-spacing;
+}
+
+.register-batton {
+  font-family: $font-family;
+  background-color: $green;
+  border: none;
+  border-radius: 8px;
+  color: $font-color;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: (18px)/15px;
+  width: 218px;
+  height: 48px;
+  cursor: pointer;
+  transition: ease-out;
+  transition-duration: 0.5s;
+}
+
+.register-batton:hover {
+  background-color: $hover;
+}
+
+.register-batton_leave {
+  max-width: 108px;
+  height: 48px;
+}
+.text-box {
+  box-sizing: border-box;
+  width: 685px * 100% / $gen-width;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  @include null-spacing;
+  z-index: 1;
+}
+
+.text-box__title {
+  display: block;
+  @include large-text-desktop;
+  color: $font-color;
+  margin: 0;
+}
+
+.text-box__subtitle {
+  display: block;
+  @include medium-text-desktop;
+  color: $font-color;
+  margin: 0;
+}
+
+.text-box_spacing {
+  align-self: flex-end;
+  padding-bottom: 112px;
+}
+
+.text-box_sizing {
+  width: 70%;
+}
+
+.text-box__subtitle_width {
+  width: 60%;
+}
+
+@media screen and (max-width: 1280px) {
+  .text-box {
+    width: 70%;
+  }
+
+  .text-box__subtitle_width {
+    width: 60%;
+  }
+
+  .text-box_spacing {
+    width: 55%;
+    padding-bottom: 100px;
+  }
+
+  .text-box_sizing {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .register-button_footer-size {
+    @include desctop-button-reg;
+  }
+
+  .text-box {
+    width: 100%;
+  }
+
+  .text-box_spacing {
+    width: 71%;
+    padding-bottom: 58px;
+    align-self: flex-end;
+  }
+
+  .text-box_sizing {
+    width: 80%;
+  }
+
+  .text-box__subtitle_width {
+    width: 100%;
+    max-width: 470px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .register-button_footer-size {
+    font-size: 10px;
+    line-height: (18px)/10px;
+    width: 140px;
+    height: 30px;
+  }
+  .logo {
+    width: 26px;
+    height: 36px;
+  }
+
+  .logo_footer-size {
+    width: 38px;
+    height: 54px;
+  }
+
+  .text-box {
+    gap: 20px;
+    max-width: 370px;
+  }
+
+  .text-box__title {
+    @include large-text-mobile;
+  }
+
+  .text-box__subtitle {
+    @include medium-text-mobile;
+  }
+
+  .text-box_sizing {
+    width: 100%;
+  }
+
+  .text-box_spacing {
+    width: 100%;
+    padding-bottom: 195px;
+    align-self: flex-start;
+  }
 }

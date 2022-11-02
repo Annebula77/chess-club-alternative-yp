@@ -70,7 +70,7 @@ $hover: rgba(6, 108, 76, 1);
   background-position: right 150px;
   padding: 26px 0 80px 160px;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .header__upper-container {
@@ -84,13 +84,6 @@ $hover: rgba(6, 108, 76, 1);
   padding: 0 160px 0 0;
 }
 
-.logo {
-  display: block;
-  width: 38px;
-  height: 54px;
-  @include null-spacing;
-}
-
 .header__action {
   display: block;
   font-size: 15px;
@@ -99,26 +92,6 @@ $hover: rgba(6, 108, 76, 1);
   color: $font-color;
   padding: 0;
   margin: 0 62px 0 auto;
-}
-
-.register-batton {
-  font-family: $font-family;
-  background-color: $green;
-  border: none;
-  border-radius: 8px;
-  color: $font-color;
-  font-weight: 600;
-  font-size: 15px;
-  line-height: (18px)/15px;
-  width: 218px;
-  height: 48px;
-  cursor: pointer;
-}
-
-.register-batton:hover {
-  background-color: $hover;
-  transition: ease-out;
-  transition-duration: 0.5s;
 }
 
 .header__main-container {
@@ -175,6 +148,7 @@ $hover: rgba(6, 108, 76, 1);
     background-image: url(../../images/tablet-header-circles-blue.svg);
     background-position: right 300px;
     padding-left: 50px;
+    padding-bottom: 49px;
 
     .header__action {
       margin: 0 33px 0 auto;
@@ -196,7 +170,12 @@ $hover: rgba(6, 108, 76, 1);
     margin: 60px 0 70px 0;
   }
   .header__subtitle {
-    padding: 0 0 212px 0;
+    padding: 0 0 60px 0;
+  }
+
+  .header__board {
+    display: block;
+    padding-top: 150px;
   }
 }
 
@@ -209,11 +188,6 @@ $hover: rgba(6, 108, 76, 1);
 
   .header__upper-container {
     padding: 0 20px 0 0;
-  }
-
-  .logo {
-    width: 26px;
-    height: 36px;
   }
 
   .header__action {
@@ -241,15 +215,18 @@ $hover: rgba(6, 108, 76, 1);
     @include large-text-mobile;
     padding: 0 0 20px 0;
     width: 90%;
+    max-width: 450px;
   }
 
   .header__subtitle {
-    padding: 0 0 92px 0;
+    padding: 0;
     @include medium-text-mobile;
     width: 90%;
+    max-width: 350px;
   }
 
   .header__board {
-    width: 93%;
+    @include mobile-board;
+    padding-top: 110px;
   }
 }

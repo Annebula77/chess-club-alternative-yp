@@ -76,6 +76,7 @@ $hover: rgba(6, 108, 76, 1);
   background-image: url(../../images/green_white-semi-circle.svg);
   background-repeat: no-repeat;
   background-position: 100px bottom;
+  overflow-x: hidden;
 }
 
 .buttles__gallery {
@@ -86,6 +87,18 @@ $hover: rgba(6, 108, 76, 1);
   justify-content: space-between;
   padding: 0;
   margin: 110px 0 110px;
+}
+
+@media screen and (max-width: 1280px) {
+  .buttles {
+    padding: 80px 80px 80px;
+    background-position: 0 bottom;
+  }
+
+  .buttles__gallery {
+    display: none;
+    padding: 80px 80px 80px;
+  }
 }
 
 .buttles__photo {
@@ -101,4 +114,29 @@ $hover: rgba(6, 108, 76, 1);
   align-self: flex-end;
   width: 416px;
   height: 104px;
+}
+
+@media screen and (max-width: 1080px) {
+  .buttles {
+    padding: 50px 50px 80px;
+    background-position: left -220px bottom;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .buttles {
+    padding: 20px 20px 0;
+    background-image: none;
+  }
+
+  .buttles__photo {
+    width: 280px;
+    height: 280px;
+  }
+
+  .buttles__board {
+    @include mobile-board;
+    margin-bottom: 20px;
+    align-self: flex-start;
+  }
 }
