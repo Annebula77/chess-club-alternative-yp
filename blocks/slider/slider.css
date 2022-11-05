@@ -5,10 +5,12 @@
 }
 
 .swiper-pagination {
+  display: none;
   bottom: 0;
 }
 
 .swiper .swiper-pagination-bullet {
+  display: none;
   width: 13px;
   height: 13px;
   background-color: #fff;
@@ -19,8 +21,12 @@
 .swiper .swiper-pagination {
   bottom: 0;
 }
-.swiper.swiper-pagination-bullet {
-  width: 13px;
-  height: 13px;
-  background-color: #fff;
+
+@media screen and (max-width: 767px) {
+  .swiper-pagination {
+    display: inline-block;
+  }
+  .swiper .swiper-pagination-bullet {
+    display: inline-block;
+  }
 }/*# sourceMappingURL=slider.css.map */

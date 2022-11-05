@@ -15,32 +15,13 @@ const swiper = new Swiper('.team__slider', {
     stopOnLastSlide: true,
     disableOnInteraction: false,
   },
-
-  speed: 800,
-  breakpoints: {
-    320: {
-      pagination:  {
-        el: '.swiper-pagination',
-        enabled: true,
-        clickable: true,
-        dynamicBullets: true,
-      },
-    },
-    767: {
-      slidesPerView: 'auto',
-      pagination: false,
-
-    },
-    1080: {
-      slidesPerView: 'auto',
-      pagination: false,
-
-    },
-    1280: {
-      slidesPerView: 3,
-      pagination: false,
-    },
+  pagination:  {
+    el: '.swiper-pagination',
+    enabled: true,
+    clickable: true,
+    dynamicBullets: true,
   },
+  speed: 800,
  });
 
  const swiperButtles = new Swiper('.buttles__slider', {
@@ -60,33 +41,13 @@ const swiper = new Swiper('.team__slider', {
     stopOnLastSlide: true,
     disableOnInteraction: false,
   },
-
-  speed: 800,
-  breakpoints: {
-    320: {
-      pagination:  {
-        el: '.swiper-pagination',
-        enabled: true,
-        clickable: true,
-        dynamicBullets: true,
-      },
-
-    },
-    767: {
-      slidesPerView: 'auto',
-      pagination: false,
-
-    },
-    1080: {
-      slidesPerView: 'auto',
-      pagination: false,
-
-    },
-    1280: {
-      slidesPerView: 3,
-      pagination: false,
-    },
+  pagination:  {
+    el: '.swiper-pagination',
+    enabled: true,
+    clickable: true,
+    dynamicBullets: true,
   },
+  speed: 800,
  });
 
 
