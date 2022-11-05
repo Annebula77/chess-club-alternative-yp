@@ -9,16 +9,17 @@ const swiper = new Swiper('.team__slider', {
   autohight: true,
   slidesPerView: 'auto',
   watchOverflow: true,
-  spaceBetween: 30,
+  spaceBetween: 80,
   autoplay: {
     delay: 1000,
     stopOnLastSlide: true,
     disableOnInteraction: false,
   },
+
   speed: 800,
   breakpoints: {
     320: {
-       pagination:  {
+      pagination:  {
         el: '.swiper-pagination',
         enabled: true,
         clickable: true,
@@ -26,17 +27,23 @@ const swiper = new Swiper('.team__slider', {
       },
     },
     767: {
+      slidesPerView: 'auto',
+      pagination: false,
 
     },
     1080: {
+      slidesPerView: 'auto',
+      pagination: false,
 
-
+    },
+    1280: {
+      slidesPerView: 3,
+      pagination: false,
     },
   },
  });
 
-const swiperButtles = new Swiper('.buttles__slider', {
-
+ const swiperButtles = new Swiper('.buttles__slider', {
   grabCursor: true,
   touchRatio: 3,
   keyboard: {
@@ -47,34 +54,45 @@ const swiperButtles = new Swiper('.buttles__slider', {
   autohight: true,
   slidesPerView: 'auto',
   watchOverflow: true,
-  spaceBetween: 30,
+  spaceBetween: 80,
   autoplay: {
     delay: 1000,
     stopOnLastSlide: true,
     disableOnInteraction: false,
   },
+
   speed: 800,
   breakpoints: {
     320: {
-       pagination:  {
+      pagination:  {
         el: '.swiper-pagination',
         enabled: true,
         clickable: true,
         dynamicBullets: true,
       },
+
     },
     767: {
+      slidesPerView: 'auto',
+      pagination: false,
 
     },
     1080: {
-   },
+      slidesPerView: 'auto',
+      pagination: false,
+
+    },
+    1280: {
+      slidesPerView: 3,
+      pagination: false,
+    },
   },
-});
+ });
 
 
-const popUpOpenButtons = document.querySelectorAll("#buttonOpen");
+const popUpOpenButtons = document.querySelectorAll(".register-batton_open");
 const popUpForm = document.querySelector(".popup-form ");
-const popUpCloseButton = document.querySelector(".register-batton_leave");
+const popUpCloseButton = document.querySelector(".register-batton__leave");
 
 function openForm(popUpForm) {
   popUpForm.classList.add("popup-form_active");

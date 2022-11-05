@@ -1,58 +1,26 @@
-.team__slider {
-  display: none;
+.swiper {
+  display: inline;
+  width: 100%;
   min-width: 0;
 }
 
-.buttles__slider {
-  display: none;
-  min-width: 0;
+.swiper-pagination {
+  bottom: 0;
 }
 
-@media screen and (max-width: 1280px) {
-  .team__slider {
-    display: inline;
-    width: 100%;
-    height: 450px;
-    margin: 110px 0 251px;
-  }
-  .buttles__slider {
-    display: inline;
-    width: 100%;
-    height: 360px;
-    margin: 110px 0 110px;
-  }
-  .swiper-pagination {
-    bottom: 0;
-  }
-  .swiper .swiper-pagination-bullet {
-    width: 13px;
-    height: 13px;
-    background-color: #fff;
-  }
-  .swiper .swiper-slide {
-    width: auto;
-  }
-  .swiper .swiper-pagination {
-    bottom: 0;
-  }
-  .swiper.swiper-pagination-bullet {
-    width: 13px;
-    height: 13px;
-    background-color: #fff;
-  }
+.swiper .swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
 }
-@media screen and (max-width: 1080px) {
-  .team__slider {
-    margin: 140px 0 140px;
-  }
+.swiper .swiper-slide {
+  width: auto;
 }
-@media screen and (max-width: 767px) {
-  .team__slider {
-    height: 390px;
-    margin: 60px 0 57px;
-  }
-  .buttles__slider {
-    height: 320px;
-    margin: 60px 0 60px;
-  }
+.swiper .swiper-pagination {
+  bottom: 0;
+}
+.swiper.swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
 }/*# sourceMappingURL=slider.css.map */

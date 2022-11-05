@@ -1,6 +1,3 @@
-/* {
-  box-shadow: 0 0 2px red;
-}*/
 .page {
   box-sizing: border-box;
   display: flex;
@@ -18,6 +15,10 @@
   text-rendering: optimizeLegibility;
   padding: 0;
   background-color: rgb(0, 0, 0);
+}
+
+* {
+  box-shadow: 0 0 2px red;
 }
 
 .content {
@@ -51,17 +52,16 @@
   font-size: 15px;
   line-height: 1.2;
   width: 218px;
-  height: 48px;
+  min-height: 48px;
   cursor: pointer;
   transition: ease-out;
   transition-duration: 0.5s;
 }
-
 .register-batton:hover {
   background-color: rgb(6, 108, 76);
 }
 
-.register-batton_leave {
+.register-batton__leave {
   max-width: 108px;
   height: 48px;
 }
@@ -96,36 +96,113 @@
   margin: 0;
 }
 
-.text-box_spacing {
+.text-box_align_right {
+  width: 47%;
   align-self: flex-end;
-  padding-bottom: 112px;
+  padding-bottom: 87px;
 }
 
-.text-box_sizing {
+.text-box_block_width {
   width: 70%;
 }
 
-.text-box__subtitle_width {
-  width: 60%;
+.text-box__subtitle_cut_width {
+  width: 62%;
+}
+
+.form {
+  box-sizing: border-box;
+  display: flex;
+  font-family: "Noto Sans";
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.form__input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 500px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Noto Sans";
+  font-size: 15px;
+  font-weight: 400px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  background-color: #1a1a1a;
+  caret-color: #fff;
+  padding-left: 28px;
+}
+.form__input:focus {
+  outline: 0;
+  outline-offset: 0;
+  border: 1px solid #5036e6;
+}
+.form__input:hover {
+  opacity: 0.6;
+  cursor: pointer;
+  transition: ease-out;
+  transition-duration: 0.3s;
+}
+.form__input:nth-of-type(2) {
+  text-transform: none;
+}
+
+::-webkit-input-placeholder {
+  font-family: "Noto Sans";
+  font-size: 15px;
+  font-weight: 400px;
+  line-height: 1.2;
+  color: rgb(255, 255, 255);
+}
+
+::-moz-placeholder {
+  font-family: "Noto Sans";
+  font-size: 15px;
+  font-weight: 400px;
+  line-height: 1.2;
+  color: rgb(255, 255, 255);
+}
+
+.form__handeler {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 233px 0 0;
+  gap: 20px;
 }
 
 @media screen and (max-width: 1280px) {
   .text-box {
     width: 70%;
   }
-  .text-box__subtitle_width {
+  .text-box__subtitle_cut_width {
     width: 60%;
   }
-  .text-box_spacing {
+  .text-box_align_right {
     width: 55%;
     padding-bottom: 100px;
   }
-  .text-box_sizing {
+  .text-box_block_width {
     width: 80%;
   }
 }
 @media screen and (max-width: 1080px) {
-  .register-button_footer-size {
+  .register-batton {
+    font-size: 13px;
+    line-height: 1.3846153846;
+    width: 184px;
+    min-height: 44px;
+  }
+  .register-button_footer_size {
     font-weight: 600;
     font-size: 15px;
     line-height: 1.2;
@@ -135,31 +212,31 @@
   .text-box {
     width: 100%;
   }
-  .text-box_spacing {
+  .text-box_align_right {
     width: 71%;
     padding-bottom: 58px;
     align-self: flex-end;
   }
-  .text-box_sizing {
+  .text-box_block_width {
     width: 80%;
   }
-  .text-box__subtitle_width {
-    width: 100%;
+  .text-box__subtitle_cut_width {
+    width: 80%;
     max-width: 470px;
   }
 }
 @media screen and (max-width: 767px) {
-  .register-button_footer-size {
+  .register-batton {
     font-size: 10px;
     line-height: 1.8;
     width: 140px;
-    height: 30px;
+    min-height: 30px;
   }
   .logo {
     width: 26px;
     height: 36px;
   }
-  .logo_footer-size {
+  .logo_footer_size {
     width: 38px;
     height: 54px;
   }
@@ -177,12 +254,33 @@
     font-weight: 400;
     line-height: 1.3;
   }
-  .text-box_sizing {
+  .text-box_block_width {
     width: 100%;
   }
-  .text-box_spacing {
+  .text-box_align_right {
     width: 100%;
     padding-bottom: 195px;
     align-self: flex-start;
+  }
+  .form {
+    gap: 10px;
+  }
+  .form__input {
+    min-width: 280px;
+    height: 42px;
+    padding: 12px 0 12px 18px;
+  }
+  ::-webkit-input-placeholder {
+    font-family: "Noto Sans";
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  ::-moz-placeholder {
+    font-family: "Noto Sans";
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .form__handeler {
+    margin-top: 133px;
   }
 }/*# sourceMappingURL=general.css.map */
