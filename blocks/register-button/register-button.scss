@@ -1,0 +1,53 @@
+@use "../../essentials/mixins" as*;
+@use "../../essentials/variables" as*;
+
+.register-button {
+  font-family: $font-family;
+  background-color: $green;
+  border: none;
+  border-radius: 8px;
+  color: $font-color;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: (18px)/15px;
+  width: 218px;
+  min-height: 48px;
+  cursor: pointer;
+  transition: ease-out;
+  transition-duration: 0.5s;
+
+  &:hover {
+    background-color: $hover;
+  }
+}
+
+.register-button__leave {
+  max-width: 108px;
+  height: 48px;
+}
+
+@media screen and (max-width: 1080px) {
+  .register-button {
+    font-size: 13px;
+    line-height: (18px)/13px;
+    width: 184px;
+    min-height: 44px;
+  }
+
+  .register-button_footer_size {
+    @include desctop-button-reg;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .register-button {
+    font-size: 10px;
+    line-height: (18px)/10px;
+    width: 140px;
+    min-height: 30px;
+  }
+
+  .register-button_footer_size {
+    height: 30px;
+  }
+}

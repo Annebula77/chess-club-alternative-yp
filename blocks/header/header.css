@@ -122,7 +122,7 @@
 @media screen and (max-width: 767px) {
   .header {
     background-image: url(../../images/mobile-blue-header.svg);
-    background-position: 92% 92px;
+    background-position: 90.5% 92px;
     padding: 16px 0 20px 20px;
   }
   .header__upper-container {
@@ -130,12 +130,6 @@
   }
   .header__action {
     display: none;
-  }
-  .register-batton {
-    font-size: 10px;
-    line-height: 1.8;
-    width: 140px;
-    height: 30px;
   }
   .header__main-container {
     width: 100%;

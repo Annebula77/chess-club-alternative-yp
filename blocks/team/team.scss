@@ -138,13 +138,13 @@
 
   .team__member-about {
     @include medium-text-mobile;
-    margin-top: -10px;
+    margin-top: -5px;
   }
   .team__member-card {
     align-items: center;
   }
   .team__slider {
-    height: 390px;
-    margin: 60px 0 57px;
+    height: 380px;
+    margin: 60px 0 67px;
   }
 }
