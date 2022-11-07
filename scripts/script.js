@@ -8,20 +8,28 @@ const swiper = new Swiper('.team__slider', {
   },
   autohight: true,
   slidesPerView: 'auto',
-  watchOverflow: true,
   spaceBetween: 80,
+  watchOverflow: true,
   autoplay: {
     delay: 1000,
     stopOnLastSlide: true,
     disableOnInteraction: false,
   },
-  pagination:  {
-    el: '.swiper-pagination',
-    enabled: true,
-    clickable: true,
-    dynamicBullets: true,
-  },
   speed: 800,
+  breakpoints: {
+    320: {
+      spaceBetween: 30,
+      pagination:  {
+        el: '.swiper-pagination',
+        enabled: true,
+        clickable: true,
+        dynamicBullets: true,
+      },
+    },
+    1080: {
+      spaceBetween: 80,
+    }
+  }
  });
 
  const swiperButtles = new Swiper('.buttles__slider', {
@@ -34,26 +42,33 @@ const swiper = new Swiper('.team__slider', {
   },
   autohight: true,
   slidesPerView: 'auto',
-  watchOverflow: true,
   spaceBetween: 80,
+  watchOverflow: true,
   autoplay: {
     delay: 1000,
     stopOnLastSlide: true,
     disableOnInteraction: false,
   },
-  pagination:  {
-    el: '.swiper-pagination',
-    enabled: true,
-    clickable: true,
-    dynamicBullets: true,
-  },
   speed: 800,
+  breakpoints: {
+    320: {
+      spaceBetween: 30,
+      pagination:  {
+        el: '.swiper-pagination',
+        enabled: true,
+        clickable: true,
+        dynamicBullets: true,
+      },
+    },
+    1080: {
+      spaceBetween: 80,
+    }
+  }
  });
 
-
-const popUpOpenButtons = document.querySelectorAll(".register-batton_open");
+const popUpOpenButtons = document.querySelectorAll(".register-button_open");
 const popUpForm = document.querySelector(".popup-form ");
-const popUpCloseButton = document.querySelector(".register-batton__leave");
+const popUpCloseButton = document.querySelector(".register-button__leave");
 
 function openForm(popUpForm) {
   popUpForm.classList.add("popup-form_active");

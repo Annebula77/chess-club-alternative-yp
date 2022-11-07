@@ -1,0 +1,15 @@
+@use "../../essentials/mixins" as*;
+@use "../../essentials/variables" as*;
+
+.content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  @include null-spacing;
+
+  &.popup-form_active {
+    display: none;
+  }
+}

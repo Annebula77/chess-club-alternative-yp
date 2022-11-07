@@ -1,0 +1,99 @@
+@use "../../essentials/mixins" as*;
+@use "../../essentials/variables" as*;
+
+.form {
+  box-sizing: border-box;
+  display: flex;
+  font-family: $font-family;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  @include null-spacing;
+  gap: 20px;
+}
+
+.form__input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 500px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  font-family: $font-family;
+  font-size: 15px;
+  font-weight: 400px;
+  line-height: (18px)/15px;
+  text-transform: capitalize;
+  color: $font-color;
+  background-color: #1a1a1a;
+  caret-color: #fff;
+  padding-left: 28px;
+
+  &:focus {
+    outline: 0;
+    outline-offset: 0;
+    border: 1px solid #5036e6;
+  }
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: ease-out;
+    transition-duration: 0.3s;
+  }
+
+  &:nth-of-type(2) {
+    text-transform: none;
+  }
+}
+
+::-webkit-input-placeholder {
+  font-family: $font-family;
+  font-size: 15px;
+  font-weight: 400px;
+  line-height: (18px)/15px;
+  color: $font-color;
+}
+::-moz-placeholder {
+  font-family: $font-family;
+  font-size: 15px;
+  font-weight: 400px;
+  line-height: (18px)/15px;
+  color: $font-color;
+}
+
+.form__handeler {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 233px 0 0;
+  gap: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .form {
+    gap: 10px;
+  }
+  .form__input {
+    min-width: 280px;
+    height: 42px;
+    padding: 12px 0 12px 18px;
+  }
+
+  ::-webkit-input-placeholder {
+    font-family: $font-family;
+    font-size: 12px;
+    line-height: (18px)/12px;
+  }
+  ::-moz-placeholder {
+    font-family: $font-family;
+    font-size: 12px;
+    line-height: (18px)/12px;
+  }
+
+  .form__handeler {
+    margin-top: 133px;
+  }
+}
