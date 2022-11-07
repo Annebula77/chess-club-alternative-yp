@@ -1,70 +1,5 @@
-$font-color: rgba(255, 255, 255, 1);
-$font-family: 'Noto Sans';
-$gen-width: 1440px;
-$color-1: rgba(0, 0, 0, 1);
-$color-2: rgba(80, 54, 230, 1);
-$font-color: rgba(255, 255, 255, 1);
-$green: rgba(0, 148, 101, 1);
-$font-family: 'Noto Sans';
-$hover: rgba(6, 108, 76, 1);
-
-@mixin desctop-button-reg {
-  font-weight: 600;
-  font-size: 15px;
-  line-height: (18px)/15px;
-  width: 218px;
-  height: 48px;
-}
-
-@mixin desctop-board {
-  width: 416px;
-  height: 104px;
-}
-
-@mixin mobile-board {
-  width: 280px;
-  height: 70px;
-}
-
-@mixin large-text-desktop {
-  font-size: 70px;
-  font-weight: 600;
-  line-height: 0.9;
-}
-
-@mixin large-text-mobile {
-  font-size: 40px;
-  font-weight: 600;
-  line-height: (36px)/40px;
-}
-
-@mixin medium-text-desktop {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.3;
-}
-
-@mixin medium-text-mobile {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: (15.6px)/12px;
-}
-
-@mixin desktop-photo {
-  width: 320px;
-  height: 320px;
-}
-
-@mixin null-spacing {
-  margin: 0;
-  padding: 0;
-}
-
-@mixin circles-desk {
-  display: block;
-  position: absolute;
-  z-index: 0;
-}
+@use "../../essentials/mixins" as*;
+@use "../../essentials/variables" as*;
 
 .team {
   position: relative;
@@ -72,69 +7,34 @@ $hover: rgba(6, 108, 76, 1);
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-width: 0;
   background-color: $color-2;
   margin: 0;
   padding: 80px 160px 60px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-.team__semi-circle-black {
+.team__figure {
   @include circles-desk;
+  @include null-spacing;
+}
+.team__semi-circle-black {
   top: 926px;
   height: 440px;
   left: 0;
-  @include null-spacing;
 }
 
 .team__quarter-green {
-  @include circles-desk;
   top: 926px + 220px;
   width: 220px;
   left: 0;
-  @include null-spacing;
 }
 
 .team__circle-green {
-  @include circles-desk;
   top: 926px;
   width: 440px;
   left: 220px;
   padding: 0;
-  @include null-spacing;
-}
-
-.text-box {
-  box-sizing: border-box;
-  width: 685px * 100% / $gen-width;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
-  @include null-spacing;
-  z-index: 1;
-}
-
-.text-box__title {
-  display: block;
-  @include large-text-desktop;
-  color: $font-color;
-  margin: 0;
-}
-
-.text-box__subtitle {
-  display: block;
-  @include medium-text-desktop;
-  color: $font-color;
-  margin: 0;
-}
-
-.team__photo-box {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 110px 0 251px;
-  margin: 0;
 }
 
 .team__member-card {
@@ -170,28 +70,81 @@ $hover: rgba(6, 108, 76, 1);
   @include null-spacing;
 }
 
-.text-box_spacing {
-  align-self: flex-end;
-  padding-bottom: 112px;
-  padding-left: 10px;
+.team__slider {
+  height: 450px;
+  margin: 110px 0 215px;
 }
 
 @media screen and (max-width: 1280px) {
+  .team {
+    padding: 90px 80px 90px;
+  }
+
   .team__semi-circle-black {
-    left: -160px;
+    left: -180px;
   }
 
   .team__quarter-green {
-    @include circles-desk;
-
-    left: -160px;
+    left: -180px;
   }
 
   .team__circle-green {
-    left: 60px;
+    left: 40px;
   }
 
-  .text-box {
-    width: 70%;
+  .team__slider {
+    height: 450px;
+    margin: 110px 0 251px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .team {
+    background-image: url(../../images/Green-rings-full.svg);
+    background-repeat: no-repeat;
+    background-size: 360px;
+    background-position: left -180px bottom 50px;
+    padding: 50px 50px 60px;
+  }
+
+  .team__figure {
+    display: none;
+  }
+
+  .team__slider {
+    margin: 140px 0 140px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .team {
+    background-image: url(../../images/mobile-green-semi-circle.svg);
+    background-size: 280px;
+    background-position: bottom;
+    padding: 22px 20px 0;
+  }
+
+  .team__member-photo {
+    width: 280px;
+    height: 280px;
+    padding: 0;
+    margin: 0 0 10px;
+  }
+
+  .team__member-name {
+    font-size: 18px;
+    letter-spacing: (23.4px) / 18px;
+  }
+
+  .team__member-about {
+    @include medium-text-mobile;
+    margin-top: -5px;
+  }
+  .team__member-card {
+    align-items: center;
+  }
+  .team__slider {
+    height: 380px;
+    margin: 60px 0 67px;
   }
 }

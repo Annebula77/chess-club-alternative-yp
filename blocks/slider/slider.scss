@@ -1,0 +1,41 @@
+@use "../../essentials/mixins" as*;
+@use "../../essentials/variables" as*;
+
+.swiper {
+  display: inline;
+  width: 100%;
+  min-width: 0;
+}
+
+.swiper-pagination {
+  display: none;
+  bottom: 0;
+}
+
+.swiper {
+  & .swiper-pagination-bullet {
+    display: none;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+  }
+
+  & .swiper-slide {
+    width: auto;
+  }
+  & .swiper-pagination {
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .swiper-pagination {
+    display: inline-block;
+  }
+
+  .swiper {
+    & .swiper-pagination-bullet {
+      display: inline-block;
+    }
+  }
+}
